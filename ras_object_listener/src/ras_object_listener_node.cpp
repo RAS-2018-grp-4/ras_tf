@@ -52,7 +52,7 @@ int main(int argc, char** argv){
   ros::init(argc, argv, "robot_tf_listener");
   ros::NodeHandle n;
 
-  ros::Subscriber pos_sub = n.subscribe("/object_position_cam_link", 100, callback_pos);
+  ros::Subscriber pos_sub = n.subscribe("/object_position_cam_link", 1, callback_pos);
 
   tf::TransformListener listener(ros::Duration(10));
 

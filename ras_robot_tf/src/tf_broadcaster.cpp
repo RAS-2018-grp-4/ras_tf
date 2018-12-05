@@ -22,8 +22,8 @@ int main(int argc, char** argv){
   ros::init(argc, argv, "robot_tf_publisher");
   ros::NodeHandle n;
 
-  ros::Subscriber sub = n.subscribe("/robot_odom", 1, odomCallback);
-
+  //ros::Subscriber sub = n.subscribe("/robot_odom", 1, odomCallback);
+  ros::Subscriber sub = n.subscribe("/robot_filter", 1, odomCallback);
   ros::Rate r(10);
 
   tf::TransformBroadcaster broadcaster;
